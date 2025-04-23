@@ -1,0 +1,7 @@
+[package]
+name = "snfoundry"
+version = "0.1.0"
+
+[dependencies]
+starknet = "2.4.0"
+openzeppelin_access = { git = "https://github.com/OpenZeppelin/cairo-contracts.git", tag = "v0.9.0" } 
