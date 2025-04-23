@@ -7,7 +7,7 @@ const deployedContracts = {
   devnet: {
     Counter: {
       address:
-        "0x9658e6ce6def3e1d6c3d82769be59d4464d21a82bc260143e6bc551c4f7ab5",
+        "0x1db69e700bd34af799841f2c90b0fdb4a5b976a2bb26999a9023b5d9c1d3123",
       abi: [
         {
           type: "impl",
@@ -54,12 +54,12 @@ const deployedContracts = {
         },
         {
           type: "impl",
-          name: "OwnableImpl",
-          interface_name: "openzeppelin_access::ownable::interface::IOwnable",
+          name: "OwnableMixinImpl",
+          interface_name: "openzeppelin_access::ownable::interface::OwnableABI",
         },
         {
           type: "interface",
-          name: "openzeppelin_access::ownable::interface::IOwnable",
+          name: "openzeppelin_access::ownable::interface::OwnableABI",
           items: [
             {
               type: "function",
@@ -87,6 +87,25 @@ const deployedContracts = {
             {
               type: "function",
               name: "renounce_ownership",
+              inputs: [],
+              outputs: [],
+              state_mutability: "external",
+            },
+            {
+              type: "function",
+              name: "transferOwnership",
+              inputs: [
+                {
+                  name: "newOwner",
+                  type: "core::starknet::contract_address::ContractAddress",
+                },
+              ],
+              outputs: [],
+              state_mutability: "external",
+            },
+            {
+              type: "function",
+              name: "renounceOwnership",
               inputs: [],
               outputs: [],
               state_mutability: "external",
@@ -206,7 +225,7 @@ const deployedContracts = {
         },
       ],
       classHash:
-        "0x1f5a917df46a340f6dcb9095f37088fa5e34d3f3744094b01d234df09a53402",
+        "0x12b1fb6211d56e4c03962378a710b5aac158d0bed726028283dfa2ca9dfdf52",
     },
   },
 } as const;
